@@ -1,4 +1,3 @@
-
 select * from tb_emp;
 
 -- CREATE 테이블 생성 (DDL: 데이터 정의어)
