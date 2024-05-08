@@ -7,14 +7,14 @@ FROM tb_sal_his;
 -- 여러 행을 묶어서 한 번에 함수를 적용
 SELECT COUNT(*) "지급 횟수", 
                  SUM(pay_amt) "지급 총액",
-                 AVG(pay_amt) "평균 지급액",
+                 ROUND(AVG(pay_amt), 5) "평균 지급액",
                  MAX(pay_amt) "최고 지급액",
                  MIN(pay_amt) "최소 지급액"
 FROM tb_sal_his;
+
 -- 단일행 함수 = 41 총 행수 다 나옴
 SELECT SUBSTR(emp_nm, 1, 1)
 FROM tb_emp;
-
 
 SELECT * 
 FROM tb_emp;  -- 41행
